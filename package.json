@@ -4,11 +4,20 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prisma:push": "npx prisma db push",
+    "execute": "npx dotenv-cli -e .env -- npx ts-node"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "@types/node": "^20.14.9",
+    "prisma": "^5.16.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.5.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.16.0"
   }
 }

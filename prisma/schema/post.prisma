@@ -1,0 +1,10 @@
+model Post {
+    id Int @id @default(autoincrement())
+
+    title       String
+    description String
+    author      User   @relation(fields: [userId], references: [id])
+    userId      Int    @map("user_id")
+
+    @@map("post")
+}
